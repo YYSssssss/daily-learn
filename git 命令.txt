@@ -1,0 +1,57 @@
+工作区 -> 暂存区 -> 版本库
+
+#git基本命令
+ls 查看
+ls -a 查看所有文件
+git status 查看git下文件状态
+git add XXX 添加到暂存库
+git config --global user.name yys  配置
+git config --golbal user.email 864486277@qq.com     配置
+git commit -m 'xxx'   向上提交 提交到版本库
+git config --list     查看配置
+git log            查看提交
+
+#git的撤销操作
+git reset HEAD index.html 撤销操作但是不影响操作区
+git checkout -- index.html  会影响工作区的文件（从暂存区的状态还原到工作区，也就是另外一种意义上面的还原）
+git reset 版本号 index.html  可以拉取已经保存在暂存区的文件下来，从而达到撤销的效果（此时的撤销并不是完全撤销，其中包含了工作区的文件和暂存区的文件。如果需要将文件完全撤销还原，需要进行checkout的操作）
+
+#git删除
+文件删除，相当于工作区的删除，需要再进行add或者commit的操作
+git rm index.html 是直接删除，工作区的文件也会删除
+git rm --cached xxx 是会保留工作区的文件删掉暂存区的文件
+git mv xxx
+
+#git branch
+git branch dev
+git checkout dev
+git branch
+切换到master，git branch -m dev fix
+git branch
+git branch -d fix
+git checkout -b dev
+
+#
+git diff 比较版本差异
+
+# git远程仓库
+git push 
+git clone
+git pull
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
